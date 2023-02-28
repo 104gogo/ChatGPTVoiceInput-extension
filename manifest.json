@@ -1,0 +1,16 @@
+{
+  "name": "我的第一个谷歌插件",
+  "version": "1.0",
+  "description": "这是一个最简单的谷歌插件。",
+  "manifest_version": 3,
+  "permissions": ["storage", "activeTab", "scripting", "tabs", "debugger"],
+  "content_scripts": [
+    {
+      "js": [
+        "rxjs.umd.js",
+        "contentScript.js"
+      ],
+      "matches": ["*://chat.openai.com/*"]
+    }
+  ]
+}
